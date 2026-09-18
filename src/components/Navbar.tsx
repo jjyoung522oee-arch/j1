@@ -26,15 +26,15 @@ export const Navbar: React.FC<NavbarProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FFFDF9]/95 backdrop-blur-md border-b border-[#F2E8DA] transition-colors">
-      {/* Top cute pastel micro bar */}
-      <div className="bg-[#FFF4E6] border-b border-[#FBE3CC] text-[#8C5A32] text-xs py-1.5 px-4 text-center font-medium">
+    <header className="sticky top-0 z-40 bg-[#F8FAFD]/95 backdrop-blur-md border-b border-[#E2E8F0] transition-colors">
+      {/* Top cute pastel blue micro bar */}
+      <div className="bg-[#EBF5FF] border-b border-[#DBEAFE] text-[#1E40AF] text-xs py-1.5 px-4 text-center font-medium">
         <div className="flex items-center justify-center gap-1.5 flex-wrap">
-          <span className="inline-flex items-center gap-1 bg-white px-2 py-0.5 rounded-full text-[11px] font-bold text-[#D97706] shadow-2xs border border-[#FED7AA]">
-            <Heart className="w-3 h-3 fill-[#F43F5E] text-[#F43F5E]" /> 초보자 환영
+          <span className="inline-flex items-center gap-1 bg-white px-2.5 py-0.5 rounded-full text-[11px] font-bold text-[#0284C7] shadow-2xs border border-[#BFDBFE]">
+            <Heart className="w-3 h-3 fill-[#38BDF8] text-[#0284C7]" /> 초보자 환영
           </span>
-          <span className="font-cute text-sm text-[#78350F]">손끝으로 조물조물 엮는 포근한 라탄 바구니 교실 🧸</span>
-          <span className="hidden sm:inline text-[#B45309] text-[11px]">누구나 따라할 수 있는 단계별 무료 가이드!</span>
+          <span className="font-cute text-sm text-[#1E3A8A]">손끝으로 조물조물 엮는 포근한 라탄 바구니 교실 🧺</span>
+          <span className="hidden sm:inline text-[#2563EB] text-[11px]">누구나 따라할 수 있는 단계별 무료 가이드!</span>
         </div>
       </div>
 
@@ -52,18 +52,18 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <div className="relative">
               <MascotBear size={46} className="transform group-hover:rotate-6 transition-transform" />
-              <span className="absolute -bottom-1 -right-1 text-[10px] bg-[#FFE8D6] border border-[#F4A261] rounded-full px-1 font-bold text-[#E76F51]">
+              <span className="absolute -bottom-1 -right-1 text-[10px] bg-[#DBEAFE] border border-[#93C5FD] rounded-full px-1 font-bold text-[#0284C7]">
                 ♥
               </span>
             </div>
             <div>
-              <div className="font-cute text-xl sm:text-2xl font-bold tracking-normal text-[#4A3525] flex items-center gap-1.5 whitespace-nowrap">
+              <div className="font-cute text-xl sm:text-2xl font-bold tracking-normal text-[#0F243E] flex items-center gap-1.5 whitespace-nowrap">
                 라탄 만들기
-                <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#FFEEDD] text-[#C05621] font-sans font-bold border border-[#FBD38D] whitespace-nowrap">
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#E0F2FE] text-[#0284C7] font-sans font-bold border border-[#BAE6FD] whitespace-nowrap">
                   원데이 홈공방 ✨
                 </span>
               </div>
-              <p className="text-[11px] text-[#9C7A5E] font-medium whitespace-nowrap">
+              <p className="text-[11px] text-[#475569] font-medium whitespace-nowrap">
                 동글동글 원형 라탄 바구니 핸드북
               </p>
             </div>
@@ -80,8 +80,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => setActiveTab(item.id)}
                   className={`flex items-center gap-1.5 px-3 xl:px-3.5 py-2 rounded-full text-xs xl:text-sm transition cursor-pointer whitespace-nowrap shrink-0 active:scale-95 ${
                     isActive
-                      ? 'bg-[#8C5A32] text-white shadow-xs font-bold'
-                      : 'text-[#665343] hover:text-[#2B1E16] hover:bg-[#FCEFE2] font-semibold'
+                      ? 'bg-[#0284C7] text-white shadow-xs font-bold'
+                      : 'text-[#334155] hover:text-[#0F243E] hover:bg-[#E0F2FE] font-semibold'
                   }`}
                 >
                   <span>{item.label}</span>
@@ -95,7 +95,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               id="nav-quick-start-btn"
               onClick={onStartGuide}
-              className="flex items-center gap-1.5 bg-[#FF8E72] hover:bg-[#FF7A59] text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-sm transition active:scale-95 cursor-pointer whitespace-nowrap"
+              className="flex items-center gap-1.5 bg-[#0284C7] hover:bg-[#0369A1] text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-sm transition active:scale-95 cursor-pointer whitespace-nowrap"
             >
               <Sparkles className="w-3.5 h-3.5 fill-white" />
               <span>지금 만들기</span>
@@ -106,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Mobile Horizontal Tab Navigation */}
-        <div className="lg:hidden flex items-center gap-1.5 overflow-x-auto py-2.5 scrollbar-none border-t border-[#F5EAD9]">
+        <div className="lg:hidden flex items-center gap-1.5 overflow-x-auto py-2.5 scrollbar-none border-t border-[#E2E8F0]">
           {navItems.map((item) => {
             const isActive = activeTab === item.id;
             return (
@@ -116,8 +116,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setActiveTab(item.id)}
                 className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-xs transition cursor-pointer whitespace-nowrap shrink-0 ${
                   isActive
-                    ? 'bg-[#8C5A32] text-white font-bold shadow-2xs'
-                    : 'bg-[#FFF8EE] text-[#78614E] border border-[#F2E4D0]'
+                    ? 'bg-[#0284C7] text-white font-bold shadow-2xs'
+                    : 'bg-[#EFF6FF] text-[#1E3A8A] border border-[#BFDBFE]'
                 }`}
               >
                 <span>{item.label}</span>

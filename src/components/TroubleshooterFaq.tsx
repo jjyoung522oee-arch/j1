@@ -75,24 +75,24 @@ export const TroubleshooterFaq: React.FC = () => {
   };
 
   return (
-    <section id="rattan-faq-section" className="py-12 sm:py-16 bg-[#FDFBF7] text-left">
+    <section id="rattan-faq-section" className="py-12 sm:py-16 bg-[#F4F9FD] text-left">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF4E6] border border-[#FED7AA] text-xs font-bold text-[#C05621] mb-3 shadow-2xs whitespace-nowrap">
-            <HelpCircle className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E0F2FE] border border-[#BAE6FD] text-xs font-bold text-[#0284C7] mb-3 shadow-2xs whitespace-nowrap">
+            <HelpCircle className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
             <span>🍯 척척박사 곰돌이의 안심 상담실</span>
           </div>
           
           <div className="flex items-center justify-center gap-3">
             <MascotBear size={48} className="hidden sm:block" />
-            <h2 className="font-cute text-2xl sm:text-3xl lg:text-4xl font-bold text-[#3E291C] tracking-wide break-keep">
+            <h2 className="font-cute text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F243E] tracking-wide break-keep">
               원형 라탄 보울 꿀팁 Q&amp;A &amp; 고민 해결소 🧸
             </h2>
           </div>
 
-          <p className="text-xs sm:text-base text-[#665343] mt-2 leading-relaxed break-keep font-medium">
+          <p className="text-xs sm:text-base text-[#475569] mt-2 leading-relaxed break-keep font-medium">
             보울 곡선이 찌그러졌을 때, 네스팅 보울이 쏙 안 들어갈 때, 테두리가 부러졌을 때의 응급처치와<br className="hidden sm:inline" />
             곰돌이 공방장의 친절한 1:1 맞춤 답변 가이드예요.
           </p>
@@ -101,14 +101,14 @@ export const TroubleshooterFaq: React.FC = () => {
         {/* Search Bar & Category Filters */}
         <div className="space-y-4 mb-8">
           <div className="relative max-w-xl mx-auto">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#FF8E72]" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0284C7]" />
             <input
               id="faq-search-input"
               type="text"
               placeholder="궁금한 점을 검색해 보세요 (예: 보울 곡선, 네스팅, 테두리, 세척)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 rounded-full border-2 border-[#FED7AA] bg-white text-xs sm:text-sm text-[#3E291C] shadow-2xs focus:outline-none focus:border-[#FF8E72] placeholder-[#A6988D] font-medium"
+              className="w-full pl-11 pr-4 py-3 rounded-full border-2 border-[#BFDBFE] bg-white text-xs sm:text-sm text-[#0F243E] shadow-2xs focus:outline-none focus:border-[#0284C7] placeholder-[#94A3B8] font-medium"
             />
           </div>
 
@@ -119,8 +119,8 @@ export const TroubleshooterFaq: React.FC = () => {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-4 py-2 rounded-full text-xs font-bold transition cursor-pointer whitespace-nowrap active:scale-95 ${
                   selectedCategory === cat.id
-                    ? 'bg-[#FF8E72] text-white shadow-2xs'
-                    : 'bg-white text-[#78614E] border border-[#FED7AA] hover:bg-[#FFF4E6]'
+                    ? 'bg-[#0284C7] text-white shadow-2xs'
+                    : 'bg-white text-[#0369A1] border border-[#BFDBFE] hover:bg-[#EFF6FF]'
                 }`}
               >
                 {cat.label}
@@ -136,36 +136,36 @@ export const TroubleshooterFaq: React.FC = () => {
             return (
               <div
                 key={faq.id}
-                className="bg-white rounded-2xl border border-[#EDE7DF] overflow-hidden transition shadow-2xs"
+                className="bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden transition shadow-2xs"
               >
                 <button
                   onClick={() => toggleFaq(faq.id)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-[#FAF7F2] transition cursor-pointer"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-[#F8FAFD] transition cursor-pointer"
                 >
-                  <span className="font-serif-kr text-xs sm:text-sm font-bold text-[#1F1A17] flex items-center gap-2.5">
-                    <span className="w-5 h-5 rounded-full bg-[#FAF2E8] text-[#8C5A32] flex items-center justify-center text-xs font-mono font-bold shrink-0">
+                  <span className="font-cute text-xs sm:text-sm font-bold text-[#0F243E] flex items-center gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center text-xs font-mono font-bold shrink-0">
                       Q
                     </span>
                     {faq.question}
                   </span>
                   {isOpen ? (
-                    <ChevronUp className="w-4 h-4 text-[#8C5A32] shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-[#0284C7] shrink-0" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-[#A6988D] shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-[#94A3B8] shrink-0" />
                   )}
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-xs text-[#5C4F44] leading-relaxed border-t border-[#F5EFE6] bg-[#FCFAF7]">
+                  <div className="px-5 pb-5 pt-1 text-xs text-[#475569] leading-relaxed border-t border-[#E2E8F0] bg-[#F8FAFD]">
                     <div className="flex items-start gap-2.5 pt-2">
-                      <span className="w-5 h-5 rounded-full bg-[#7A8B63] text-white flex items-center justify-center text-xs font-mono font-bold shrink-0 mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-[#059669] text-white flex items-center justify-center text-xs font-mono font-bold shrink-0 mt-0.5">
                         A
                       </span>
                       <div className="space-y-2 flex-1">
                         <p>{faq.answer}</p>
                         <div className="flex gap-1.5 flex-wrap pt-1">
                           {faq.keywords.map((kw, i) => (
-                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-md bg-white border border-[#EDE7DF] text-[#8C7B6E]">
+                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-md bg-white border border-[#E2E8F0] text-[#0284C7] font-semibold">
                               #{kw}
                             </span>
                           ))}
@@ -180,14 +180,14 @@ export const TroubleshooterFaq: React.FC = () => {
         </div>
 
         {/* Ask AI Artisan Box */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-white border-2 border-[#FED7AA] shadow-xs">
+        <div className="p-6 sm:p-8 rounded-3xl bg-white border-2 border-[#BFDBFE] shadow-xs">
           <div className="flex items-center gap-3 mb-2">
             <MascotBear size={42} />
             <div>
-              <h3 className="font-cute text-lg sm:text-xl font-bold text-[#3E291C]">
+              <h3 className="font-cute text-lg sm:text-xl font-bold text-[#0F243E]">
                 곰돌이 공방장에게 물어보기 🍯
               </h3>
-              <p className="text-xs text-[#78614E]">
+              <p className="text-xs text-[#64748B]">
                 제작 중 환심이 부러지거나 형태가 찌그러졌을 때 질문을 남겨주시면 즉시 꿀팁을 드려요!
               </p>
             </div>
@@ -199,12 +199,12 @@ export const TroubleshooterFaq: React.FC = () => {
               value={userQuestion}
               onChange={(e) => setUserQuestion(e.target.value)}
               placeholder="예: 네스팅 보울 크기 맞추는 법이 궁금해요, 과일 담았을 때 세척법..."
-              className="flex-1 p-3.5 rounded-full border border-[#FED7AA] bg-[#FFFDF9] text-xs sm:text-sm text-[#3E291C] focus:outline-none focus:border-[#FF8E72] px-4 font-medium"
+              className="flex-1 p-3.5 rounded-full border border-[#BFDBFE] bg-[#F8FAFD] text-xs sm:text-sm text-[#0F243E] focus:outline-none focus:border-[#0284C7] px-4 font-medium placeholder-[#94A3B8]"
             />
             <button
               type="submit"
               disabled={isThinking}
-              className="px-6 py-3.5 rounded-full bg-[#FF8E72] hover:bg-[#FF7A59] text-white text-xs sm:text-sm font-cute transition cursor-pointer shrink-0 disabled:opacity-50 active:scale-95 shadow-2xs"
+              className="px-6 py-3.5 rounded-full bg-[#0284C7] hover:bg-[#0369A1] text-white text-xs sm:text-sm font-cute transition cursor-pointer shrink-0 disabled:opacity-50 active:scale-95 shadow-2xs"
             >
               {isThinking ? '곰돌이가 생각 중... 🐾' : '질문 보내기 💌'}
             </button>
@@ -212,18 +212,18 @@ export const TroubleshooterFaq: React.FC = () => {
 
           {/* AI Q&A Feed */}
           {aiAnswers.length > 0 && (
-            <div className="mt-6 space-y-3 pt-4 border-t border-[#F5EAD9]">
+            <div className="mt-6 space-y-3 pt-4 border-t border-[#E2E8F0]">
               {aiAnswers.map((item, idx) => (
-                <div key={idx} className="p-4 sm:p-5 rounded-3xl bg-[#FFF8EE] border border-[#FED7AA] space-y-2">
+                <div key={idx} className="p-4 sm:p-5 rounded-3xl bg-[#EFF6FF] border border-[#BFDBFE] space-y-2">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="font-cute font-bold text-[#C05621] flex items-center gap-1.5">
+                    <span className="font-cute font-bold text-[#0369A1] flex items-center gap-1.5">
                       <span>🐾 Q. {item.q}</span>
                     </span>
-                    <span className="text-[11px] bg-white px-2.5 py-0.5 rounded-full border border-[#FED7AA] text-[#B45309] font-bold">
+                    <span className="text-[11px] bg-white px-2.5 py-0.5 rounded-full border border-[#BFDBFE] text-[#0284C7] font-bold">
                       {item.time}
                     </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#4A3B32] leading-relaxed bg-white p-3.5 rounded-2xl border border-[#F2E4D0] font-medium">
+                  <p className="text-xs sm:text-sm text-[#1E293B] leading-relaxed bg-white p-3.5 rounded-2xl border border-[#E2E8F0] font-medium">
                     {item.a}
                   </p>
                 </div>
