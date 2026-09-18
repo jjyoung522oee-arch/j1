@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cute: "Jua", "Gaegu", cursive, sans-serif;
+  --font-hand: "Gaegu", cursive, sans-serif;
+  --font-rounded: "Gowun Dodum", "Noto Sans KR", -apple-system, sans-serif;
+  --font-sans: "Gowun Dodum", "Noto Sans KR", -apple-system, sans-serif;
+  --font-serif: "Gowun Dodum", Georgia, serif;
+}
+
+html {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Gowun Dodum", "Noto Sans KR", -apple-system, sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  letter-spacing: -0.01em;
+  background-color: #FFFDF9;
+}
+
+/* Korean typography word-break keep-all */
+h1, h2, h3, h4, h5, h6, p, span, button, a, li, label, div {
+  word-break: keep-all;
+}
+
+.font-cute {
+  font-family: "Jua", cursive, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.font-hand {
+  font-family: "Gaegu", cursive, sans-serif;
+}
+
+.font-serif-kr {
+  font-family: "Jua", "Gowun Dodum", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.bg-rattan-pattern {
+  background-color: #FFFDF9;
+  background-image: radial-gradient(#F5EAD9 1px, transparent 1px), radial-gradient(#F5EAD9 1px, #FFFDF9 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
